@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🇮🇳 Freedom Fighter Hangman</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", "Segoe UI", Verdana, Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(180deg, #fff4e6 0%, #faf6ef 45%, #eafbea 100%);
+        }
+
+        h1 {
+            font-family: "Fraunces", Georgia, serif;
+            font-weight: 600;
+            color: #16284d;
+            margin-top: 34px;
+            font-size: 2rem;
+        }
+
+        .level {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 10px;
+            color: #b8630f;
+        }
+
+        .game {
+            width: 850px;
+            max-width: 95%;
+            margin: 24px auto;
+            padding: 30px;
+
+            background: white;
+            border-radius: 22px;
+
+            box-shadow: 0 24px 48px -12px rgba(28,22,12,0.2);
+
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+
+        .hangman {
+            width: 350px;
+            height: 350px;
+            position: relative;
+        }
+
+        .gallow {
+            position: absolute;
+            left: 50px;
+            bottom: 30px;
+            width: 200px;
+            height: 10px;
+            background: #333;
+        }
+
+        .pole {
+            position: absolute;
+            left: 70px;
+            bottom: 30px;
+            width: 10px;
+            height: 280px;
+            background: #333;
+        }
+
+        .top {
+            position: absolute;
+            left: 70px;
+            top: 30px;
+            width: 150px;
+            height: 10px;
+            background: #333;
+        }
+
+        .rope {
+            position: absolute;
+            left: 210px;
+            top: 30px;
+            width: 5px;
+            height: 50px;
+            background: #333;
+        }
+
+        .part {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .head {
+            position: absolute;
+            left: 185px;
+            top: 80px;
+            width: 55px;
+            height: 55px;
+            border: 5px solid #333;
+            border-radius: 50%;
+        }
+
+        .body {
+            position: absolute;
+            left: 210px;
+            top: 135px;
+            width: 5px;
+            height: 80px;
+            background: #333;
+        }
+
+        .left-arm {
+            position: absolute;
+            left: 170px;
+            top: 150px;
+            width: 45px;
+            height: 5px;
+            background: #333;
+            transform: rotate(-35deg);
+        }
+
+        .right-arm {
+            position: absolute;
+            left: 210px;
+            top: 150px;
+            width: 45px;
+            height: 5px;
+            background: #333;
+            transform: rotate(35deg);
+        }
+
+        .left-leg {
+            position: absolute;
+            left: 175px;
+            top: 205px;
+            width: 55px;
+            height: 5px;
+            background: #333;
+            transform: rotate(-55deg);
+        }
+
+        .right-leg {
+            position: absolute;
+            left: 210px;
+            top: 205px;
+            width: 55px;
+            height: 5px;
+            background: #333;
+            transform: rotate(55deg);
+        }
+
+        
+
+        .content {
+            width: 450px;
+        }
+
+        .score {
+            font-size: 19px;
+            font-weight: 700;
+            color: #16284d;
+            margin: 10px;
+        }
+
+        .hint {
+            font-size: 17px;
+            color: #55483f;
+            margin: 15px;
+        }
+
+        #word {
+            font-family: "Fraunces", Georgia, serif;
+            font-size: 30px;
+            letter-spacing: 8px;
+            font-weight: 600;
+            color: #1c1b19;
+            margin: 25px 0;
+        }
+
+        .wrong {
+            color: #9c2b2b;
+            font-size: 17px;
+            font-weight: 600;
+            margin: 15px;
+        }
+
+        #letters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 7px;
+        }
+
+        .letter {
+            width: 38px;
+            height: 38px;
+            border: none;
+            border-radius: 10px;
+            background: #14693f;
+            color: white;
+            font-family: "Inter", inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+
+        .letter:hover {
+            background: #0d4c2d;
+            transform: translateY(-2px);
+        }
+
+        .letter:disabled {
+            background: #d8d2c4;
+            color: #948d81;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        #message {
+            font-size: 19px;
+            font-weight: 700;
+            color: #16284d;
+            margin: 20px;
+        }
+
+        button.next {
+            padding: 13px 28px;
+            border: none;
+            border-radius: 999px;
+            background: #16284d;
+            color: white;
+            font-family: "Inter", inherit;
+            font-size: 15.5px;
+            font-weight: 600;
+            cursor: pointer;
+            display: none;
+            transition: transform 0.18s ease, background 0.18s ease;
+        }
+
+        button.next:hover {
+            background: #0b1830;
+            transform: translateY(-2px);
+        }
+
+        @media(max-width: 700px) {
+
+            .game {
+                flex-direction: column;
+            }
+
+            .hangman {
+                transform: scale(0.8);
+            }
+
+            .content {
+                width: 100%;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="../../assets/css/site-theme.css">
+</head>
+
+<body>
+<a class="wtd-home-link" href="../../home/index.html">🏠 Home</a>
+
+    <h1>Freedom Fighter Hangman</h1>
+
+    <div class="level">
+        Level: <span id="level">Easy</span>
+    </div>
+
+    <div class="game">
+
+        
+        <div class="hangman">
+
+            <div class="gallow"></div>
+            <div class="pole"></div>
+            <div class="top"></div>
+            <div class="rope"></div>
+
+            
+            <div id="head" class="part head"></div>
+            <div id="body" class="part body"></div>
+            <div id="leftArm" class="part left-arm"></div>
+            <div id="rightArm" class="part right-arm"></div>
+            <div id="leftLeg" class="part left-leg"></div>
+            <div id="rightLeg" class="part right-leg"></div>
+
+        </div>
+
+        
+        <div class="content">
+
+            <div class="score">
+                ⭐ Score: <span id="score">0</span>
+            </div>
+
+            <div class="hint">
+                💡 <span id="hint"></span>
+            </div>
+
+            <div id="word"></div>
+
+            <div class="wrong">
+                ❌ Wrong Attempts:
+                <span id="wrong">0</span> / 6
+            </div>
+
+            <div id="letters"></div>
+
+            <div id="message"></div>
+
+            <button class="next" id="next" onclick="nextGame()">
+                Next Freedom Fighter →
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+const levels = {
+    Easy: [ {
+        name: "BHAGAT SINGH",
+        hint: "A famous revolutionary who fought against British rule."
+    }, {
+        name: "LALA LAJPAT RAI",
+        hint: "Known as the Lion of Punjab."
+    }, {
+        name: "SAROJINI NAIDU",
+        hint: "Known as the Nightingale of India."
+    }, {
+        name: "MAHATMA GANDHI",
+        hint: "He led the Dandi March and promoted non-violence."
+    }, {
+        name: "ANNIE BESANT",
+        hint: "She supported India's freedom movement and Home Rule."
+    } ],
+    Medium: [ {
+        name: "RANI LAKSHMIBAI",
+        hint: "The famous queen of Jhansi who fought in the 1857 revolt."
+    }, {
+        name: "SUBHAS CHANDRA BOSE",
+        hint: "He was popularly known as Netaji."
+    }, {
+        name: "RAJENDRA PRASAD",
+        hint: "He became the first President of independent India."
+    }, {
+        name: "DADABHAI NAOROJI",
+        hint: "Known as the Grand Old Man of India."
+    }, {
+        name: "MAULANA ABUL KALAM AZAD",
+        hint: "A freedom fighter and important leader of the Indian National Congress."
+    } ],
+    Hard: [ {
+        name: "CHANDRASHEKHAR AZAD",
+        hint: "A revolutionary who fought against British rule."
+    }, {
+        name: "BAL GANGADHAR TILAK",
+        hint: "He strongly advocated Swaraj."
+    }, {
+        name: "SARDAR VALLABHBHAI PATEL",
+        hint: "Known as the Iron Man of India."
+    }, {
+        name: "JAWAHARLAL NEHRU",
+        hint: "India's first Prime Minister after independence."
+    }, {
+        name: "MANGAL PANDEY",
+        hint: "A soldier associated with the beginning of the 1857 revolt."
+    } ]
+};
+
+const levelNames = [ "Easy", "Medium", "Hard" ];
+
+let levelIndex = 0;
+
+let fighterIndex = 0;
+
+let current;
+
+let guessed = [];
+
+let wrong = 0;
+
+let score = 0;
+let scoreSaved = false;
+
+const maxWrong = 6;
+
+function newGame() {
+    const levelName = levelNames[levelIndex];
+    const fighters = levels[levelName];
+    current = fighters[fighterIndex];
+    guessed = [];
+    wrong = 0;
+    document.getElementById("level").textContent = levelName;
+    document.getElementById("wrong").textContent = wrong;
+    document.getElementById("hint").textContent = current.hint;
+    document.getElementById("message").textContent = "";
+    document.getElementById("next").style.display = "none";
+    hideHangman();
+    createLetters();
+    displayWord();
+}
+
+function displayWord() {
+    let result = "";
+    for (let char of current.name) {
+        if (char === " ") {
+            result += "   ";
+        } else if (guessed.includes(char)) {
+            result += char + " ";
+        } else {
+            result += "_ ";
+        }
+    }
+    document.getElementById("word").textContent = result;
+    checkWin();
+}
+
+function createLetters() {
+    const container = document.getElementById("letters");
+    container.innerHTML = "";
+    for (let i = 65; i <= 90; i++) {
+        let letter = String.fromCharCode(i);
+        let button = document.createElement("button");
+        button.textContent = letter;
+        button.className = "letter";
+        button.onclick = function() {
+            guessLetter(letter, button);
+        };
+        container.appendChild(button);
+    }
+}
+
+function guessLetter(letter, button) {
+    button.disabled = true;
+    if (current.name.includes(letter)) {
+        guessed.push(letter);
+        displayWord();
+    } else {
+        wrong++;
+        document.getElementById("wrong").textContent = wrong;
+        showHangmanPart(wrong);
+        if (wrong === maxWrong) {
+            loseGame();
+        }
+    }
+}
+
+function showHangmanPart(number) {
+    if (number === 1) document.getElementById("head").classList.add("show");
+    if (number === 2) document.getElementById("body").classList.add("show");
+    if (number === 3) document.getElementById("leftArm").classList.add("show");
+    if (number === 4) document.getElementById("rightArm").classList.add("show");
+    if (number === 5) document.getElementById("leftLeg").classList.add("show");
+    if (number === 6) document.getElementById("rightLeg").classList.add("show");
+}
+
+function hideHangman() {
+    const parts = document.querySelectorAll(".part");
+    parts.forEach(part => {
+        part.classList.remove("show");
+    });
+}
+
+function checkWin() {
+    let complete = true;
+    for (let char of current.name) {
+        if (char !== " " && !guessed.includes(char)) {
+            complete = false;
+            break;
+        }
+    }
+    if (complete) {
+        score++;
+        document.getElementById("score").textContent = score;
+        document.getElementById("message").textContent = "🎉 Correct! You saved the freedom fighter!";
+        disableLetters();
+        document.getElementById("next").style.display = "inline-block";
+    }
+}
+
+function loseGame() {
+    document.getElementById("message").textContent = "❌ Game Over! The answer was " + current.name;
+    disableLetters();
+    document.getElementById("next").style.display = "inline-block";
+}
+
+function nextGame() {
+    fighterIndex++;
+    const currentLevel = levelNames[levelIndex];
+    const totalFighters = levels[currentLevel].length;
+    if (fighterIndex >= totalFighters) {
+        levelIndex++;
+        fighterIndex = 0;
+        if (levelIndex >= levelNames.length) {
+            document.getElementById("level").textContent = "🏆 Completed!";
+            document.getElementById("word").textContent = "";
+            document.getElementById("hint").textContent = "";
+            document.getElementById("letters").innerHTML = "";
+            document.getElementById("message").textContent = "🎉 Congratulations! You completed all 15 freedom fighters!";
+            if (!scoreSaved && typeof EduQuestData !== "undefined") { scoreSaved = true; EduQuestData.saveScore("hangman", score); }
+            document.getElementById("next").style.display = "none";
+            return;
+        }
+        const newLevel = levelNames[levelIndex];
+        document.getElementById("message").textContent = "🎊 Great! You unlocked " + newLevel + " Level!";
+    }
+    newGame();
+}
+
+function disableLetters() {
+    const buttons = document.querySelectorAll(".letter");
+    buttons.forEach(button => {
+        button.disabled = true;
+    });
+}
+
+newGame();</script>
+
+<script src="../../home/js/eduquest-data.js"></script>
+</body>
+</html>

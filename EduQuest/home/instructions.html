@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduQuest &mdash; Game Guide</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/instructions.css">
+<link rel="stylesheet" href="../assets/css/site-theme.css">
+</head>
+<body class="landing-page">
+
+<header class="site-header">
+    <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="EduQuest logo">
+        <span class="logo-word">EduQuest</span>
+    </a>
+
+    <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#games">Games</a>
+        <a href="instructions.html" class="active" aria-current="page">Game Guide</a>
+    </nav>
+
+    <div class="account" id="account-area">
+        <a href="login.php" class="account-login">Login</a>
+        <a href="register.php" class="account-register">Register</a>
+    </div>
+</header>
+
+<section class="guide-hero">
+    <p class="eyebrow center">How to play</p>
+    <h1>Your guide to all six games</h1>
+    <p class="guide-lede">
+        Every game teaches a different slice of India &mdash; its states, its history,
+        its monuments, its words. Here's exactly how each one works, so you can jump
+        straight into playing.
+    </p>
+</section>
+
+<div class="guide-toolbar">
+    <button type="button" id="expand-all">Expand all</button>
+    <button type="button" id="collapse-all">Collapse all</button>
+</div>
+
+<section class="guide-grid">
+
+    <article class="guide-card" data-accent="navy">
+        <div class="guide-card-head">
+            <span class="guide-icon">&#128506;&#65039;</span>
+            <div>
+                <span class="guide-card-tag">Geography</span>
+                <h3>Map Challenge</h3>
+            </div>
+        </div>
+        <p class="guide-desc">Name all 28 Indian states from memory before you run out of ideas.</p>
+        <details class="guide-details">
+            <summary>How to play</summary>
+            <ol>
+                <li>Type the name of an Indian state into the box and press <strong>Guess</strong>, or just hit Enter.</li>
+                <li>Spelling doesn't have to be perfect &mdash; capitalisation is ignored, but the name needs to be recognisable.</li>
+                <li>Every correct guess labels that state on the map immediately.</li>
+                <li>Keep going until you've named all 28 states, or click <strong>Give up</strong> to reveal the ones you missed.</li>
+                <li>Click <strong>Play again</strong> to clear the map and start a fresh round.</li>
+            </ol>
+        </details>
+        <div class="guide-card-footer">
+            <a class="guide-play-link" href="../games/states/index.html">Play now <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </article>
+
+    <article class="guide-card" data-accent="maroon">
+        <div class="guide-card-head">
+            <span class="guide-icon">&#128221;</span>
+            <div>
+                <span class="guide-card-tag">Culture &amp; history</span>
+                <h3>Crossword Challenge</h3>
+            </div>
+        </div>
+        <p class="guide-desc">Solve an interlocking crossword built fresh from 80 clues on India's history, culture and geography.</p>
+        <details class="guide-details">
+            <summary>How to play</summary>
+            <ol>
+                <li>Enter your name and click <strong>Start Game</strong> &mdash; 12 clues are picked at random and arranged into a real crossword grid.</li>
+                <li>Click any clue in the Across or Down lists to jump to its word, or click a square directly.</li>
+                <li>Type letters straight into the grid, and use the arrow keys to move between cells.</li>
+                <li>Use <strong>Check Answers</strong> to see how you're doing, and <strong>Reveal a Letter</strong> if you're stuck.</li>
+                <li><strong>New Puzzle</strong> deals a fresh set of 12 clues any time &mdash; a timer and live score track your run.</li>
+            </ol>
+        </details>
+        <div class="guide-card-footer">
+            <a class="guide-play-link" href="../games/crossword/index.html">Play now <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </article>
+
+    <article class="guide-card" data-accent="saffron">
+        <div class="guide-card-head">
+            <span class="guide-icon">&#127937;</span>
+            <div>
+                <span class="guide-card-tag">Quiz</span>
+                <h3>Quiz Challenge</h3>
+            </div>
+        </div>
+        <p class="guide-desc">Spin the wheel to pick a topic, then answer against the clock.</p>
+        <details class="guide-details">
+            <summary>How to play</summary>
+            <ol>
+                <li>Click <strong>Spin</strong> to spin the wheel and land on a topic &mdash; Geography, History, Polity, Culture, Sports or General Knowledge.</li>
+                <li>Answer the questions from that topic as they appear.</li>
+                <li>Landed somewhere you'd rather not? <strong>Refresh Wheel</strong> resets it for another spin.</li>
+            </ol>
+        </details>
+        <div class="guide-card-footer">
+            <a class="guide-play-link" href="../games/quiz/index.html">Play now <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </article>
+
+    <article class="guide-card" data-accent="green">
+        <div class="guide-card-head">
+            <span class="guide-icon">&#128260;</span>
+            <div>
+                <span class="guide-card-tag">Vocabulary</span>
+                <h3>Word Scramble</h3>
+            </div>
+        </div>
+        <p class="guide-desc">Unscramble jumbled words across six topics, from wildlife to space missions.</p>
+        <details class="guide-details">
+            <summary>How to play</summary>
+            <ol>
+                <li>Pick one of six topics: Science &amp; Tech, Monuments &amp; Architecture, Languages &amp; Literature, Economy &amp; Finance, Environment &amp; Wildlife, or Education &amp; Institutions.</li>
+                <li>Unscramble the jumbled letters and type your answer &mdash; five words per topic.</li>
+                <li>Stuck? Two hints are available per word, but you only get three hearts (&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;) before the round ends.</li>
+                <li>Finish the set to see your score, then play again or head back to pick a new topic.</li>
+            </ol>
+        </details>
+        <div class="guide-card-footer">
+            <a class="guide-play-link" href="../games/scramble/index.html">Play now <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </article>
+
+    <article class="guide-card" data-accent="ink">
+        <div class="guide-card-head">
+            <span class="guide-icon">&#128373;&#65039;</span>
+            <div>
+                <span class="guide-card-tag">History</span>
+                <h3>Personality Guess</h3>
+            </div>
+        </div>
+        <p class="guide-desc">Guess the freedom fighter, one revealed letter at a time.</p>
+        <details class="guide-details">
+            <summary>How to play</summary>
+            <ol>
+                <li>A freedom fighter's name is hidden as blanks, with one hint shown about who they are.</li>
+                <li>Click letters to guess &mdash; correct ones fill in the blanks, wrong ones cost you one of six chances.</li>
+                <li>Guess the full name before six wrong guesses to save the figure and move to the next one.</li>
+                <li>Progress through Easy, Medium and Hard difficulty &mdash; five personalities each, fifteen in total.</li>
+            </ol>
+        </details>
+        <div class="guide-card-footer">
+            <a class="guide-play-link" href="../games/hangman/index.html">Play now <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </article>
+
+    <article class="guide-card" data-accent="navy-deep">
+        <div class="guide-card-head">
+            <span class="guide-icon">&#127963;&#65039;</span>
+            <div>
+                <span class="guide-card-tag">Memory</span>
+                <h3>Flip Card Match</h3>
+            </div>
+        </div>
+        <p class="guide-desc">Match pairs of India's most iconic monuments.</p>
+        <details class="guide-details">
+            <summary>How to play</summary>
+            <ol>
+                <li>Choose a difficulty &mdash; Easy (4 pairs), Medium (6 pairs) or Hard (8 pairs).</li>
+                <li>Flip two cards at a time to reveal the monuments underneath.</li>
+                <li>Matching pairs stay face-up; a mismatch flips back after a moment, so remember what you've seen.</li>
+                <li>Match every pair to complete the level, then hit <strong>Restart Game</strong> to shuffle and try again.</li>
+            </ol>
+        </details>
+        <div class="guide-card-footer">
+            <a class="guide-play-link" href="../games/monuments/index.html">Play now <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </article>
+
+</section>
+
+<footer>
+    <div class="footer-logo">&#127470;&#127475; EduQuest</div>
+    <p>Learn. Play. Discover.</p>
+    <p class="footer-fine">&copy; 2026 EduQuest. All rights reserved.</p>
+</footer>
+
+<script src="js/eduquest-data.js"></script>
+<script src="js/site-auth.js"></script>
+<script src="js/instructions.js"></script>
+</body>
+</html>

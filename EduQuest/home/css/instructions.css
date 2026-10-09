@@ -1,0 +1,226 @@
+/* ===========================================================
+   EduQuest — Game Guide page
+   Extends home/css/style.css + assets/css/site-theme.css
+   =========================================================== */
+
+.logo,
+.logo:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a.active {
+    color: var(--ink);
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+.guide-hero {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 70px 24px 8px;
+    text-align: center;
+}
+
+.guide-hero h1 {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.12;
+    margin: 8px 0 18px;
+    color: var(--ink);
+}
+
+.guide-lede {
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 auto;
+    max-width: 56ch;
+}
+
+.guide-toolbar {
+    max-width: 1180px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.guide-toolbar button {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    transition: border-color 0.18s var(--ease), transform 0.18s var(--ease);
+}
+
+.guide-toolbar button:hover {
+    border-color: var(--navy);
+    transform: translateY(-1px);
+}
+
+.guide-grid {
+    max-width: 1180px;
+    margin: 18px auto 100px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.guide-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease);
+}
+
+.guide-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.guide-card-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 24px 24px 14px;
+}
+
+.guide-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #fff8ee;
+}
+
+.guide-card[data-accent="navy"] .guide-icon       { background: var(--navy); }
+.guide-card[data-accent="maroon"] .guide-icon     { background: var(--maroon); }
+.guide-card[data-accent="saffron"] .guide-icon    { background: var(--saffron-deep); }
+.guide-card[data-accent="green"] .guide-icon      { background: var(--green); }
+.guide-card[data-accent="ink"] .guide-icon        { background: var(--ink); }
+.guide-card[data-accent="navy-deep"] .guide-icon  { background: var(--navy-deep); }
+
+.guide-card-tag {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 4px;
+}
+
+.guide-card-head h3 {
+    font-size: 19px;
+    margin: 0;
+    color: var(--ink);
+}
+
+.guide-desc {
+    padding: 0 24px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+    min-height: 44px;
+}
+
+.guide-details {
+    margin: 0 24px 20px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+}
+
+.guide-details summary {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    list-style: none;
+}
+
+.guide-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.guide-details summary::before {
+    content: "\25B8";
+    display: inline-block;
+    transition: transform 0.18s var(--ease);
+}
+
+.guide-details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.guide-details ol {
+    margin: 14px 0 0;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+}
+
+.guide-details li {
+    margin-bottom: 8px;
+}
+
+.guide-details li:last-child {
+    margin-bottom: 0;
+}
+
+.guide-card-footer {
+    padding: 0 24px 24px;
+}
+
+.guide-play-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.guide-play-link:hover {
+    color: var(--saffron-deep);
+}
+
+.guide-play-link span {
+    transition: transform 0.2s var(--ease);
+}
+
+.guide-play-link:hover span {
+    transform: translateX(3px);
+}
+
+@media (max-width: 820px) {
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .guide-toolbar {
+        justify-content: center;
+    }
+}

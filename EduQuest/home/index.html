@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduQuest</title>
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="../assets/css/site-theme.css">
+
+</head>
+
+
+<body class="landing-page">
+
+
+<!-- Header -->
+
+<header class="site-header">
+
+    <div class="logo">
+
+        <img src="images/logo.png" alt="EduQuest logo">
+
+        <span class="logo-word">EduQuest</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#games">Games</a>
+
+        <a href="instructions.html">Game Guide</a>
+
+    </nav>
+
+
+    <div class="account" id="account-area">
+
+        <a href="login.php" class="account-login">
+            Login
+        </a>
+
+        <a href="register.php" class="account-register">
+            Register
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- Home -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            Learn &middot; Play &middot; Discover
+        </p>
+
+
+        <h1>
+            Explore India, one game at a time.
+        </h1>
+
+
+        <p class="hero-lede">
+
+            Six hands-on challenges built around India's states,
+            history, monuments and culture &mdash; made to feel
+            like play, built to teach.
+
+        </p>
+
+
+        <a href="#games" class="btn btn-primary">
+
+            Explore the games
+
+            <span aria-hidden="true">
+                &rarr;
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <div class="hero-art" aria-hidden="true">
+
+        <div class="hero-blob"></div>
+
+        <img src="images/homeimg.png" alt="">
+
+    </div>
+
+</section>
+
+
+
+<!-- About Us -->
+
+<section id="about" class="about">
+
+    <p class="eyebrow center">
+        Why EduQuest
+    </p>
+
+
+    <h2>
+        Knowledge, disguised as fun
+    </h2>
+
+
+    <p class="about-text">
+
+        EduQuest turns study material into six small,
+        replayable games.
+
+        Instead of memorising facts, you piece them together
+        &mdash; matching monuments, filling in a crossword,
+        spinning your way into a quiz &mdash; and the learning
+        happens as a side effect.
+
+    </p>
+
+
+    <div class="about-boxes">
+
+
+        <div class="about-box">
+
+            <span class="about-icon">
+                🎓
+            </span>
+
+            <h3>
+                Learn
+            </h3>
+
+            <p>
+                Real facts about India's geography, history
+                and culture, in small doses.
+            </p>
+
+        </div>
+
+
+
+        <div class="about-box">
+
+            <span class="about-icon">
+                🎮
+            </span>
+
+            <h3>
+                Play
+            </h3>
+
+            <p>
+                Six distinct games, each with its own rules,
+                pace and personality.
+            </p>
+
+        </div>
+
+
+
+        <div class="about-box">
+
+            <span class="about-icon">
+                🧠
+            </span>
+
+            <h3>
+                Remember
+            </h3>
+
+            <p>
+                Repetition through play builds recall better
+                than reading alone.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Games -->
+
+<section id="games" class="games">
+
+    <p class="eyebrow center">
+        Six games, one journey
+    </p>
+
+
+    <h2>
+        Pick a challenge
+    </h2>
+
+
+    <p class="games-subtitle">
+        Every card below is a different way to learn the same India.
+    </p>
+
+
+
+    <div class="game-cards">
+
+
+        <!-- Map -->
+
+        <a class="game-card"
+           data-accent="navy"
+           href="../games/states/index.html">
+
+            <div class="card-media">
+
+                <video autoplay muted loop playsinline>
+
+                    <source
+                        src="images/mapvideo.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="card-tag">
+                    Geography
+                </span>
+
+
+                <h3>
+                    Map Challenge
+                </h3>
+
+
+                <p>
+                    Name all 28 states from memory before
+                    the map fills in.
+                </p>
+
+
+                <span class="card-cta">
+
+                    Play now
+
+                    <span aria-hidden="true">
+                        &rarr;
+                    </span>
+
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- Crossword -->
+
+        <a class="game-card"
+           data-accent="maroon"
+           href="../games/crossword/index.html">
+
+            <div class="card-media">
+
+                <video autoplay muted loop playsinline>
+
+                    <source
+                        src="images/crosswordvideo.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="card-tag">
+                    Culture &amp; history
+                </span>
+
+
+                <h3>
+                    Crossword Challenge
+                </h3>
+
+
+                <p>
+                    Solve clues on India's history,
+                    culture and geography.
+                </p>
+
+
+                <span class="card-cta">
+
+                    Play now
+
+                    <span aria-hidden="true">
+                        &rarr;
+                    </span>
+
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- Quiz -->
+
+        <a class="game-card"
+           data-accent="saffron"
+           href="../games/quiz/index.html">
+
+            <div class="card-media">
+
+                <video autoplay muted loop playsinline>
+
+                    <source
+                        src="images/quizvideo.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="card-tag">
+                    Quiz
+                </span>
+
+
+                <h3>
+                    Quiz Challenge
+                </h3>
+
+
+                <p>
+                    Spin the wheel to pick a topic,
+                    then answer against the clock.
+                </p>
+
+
+                <span class="card-cta">
+
+                    Play now
+
+                    <span aria-hidden="true">
+                        &rarr;
+                    </span>
+
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- Scramble -->
+
+        <a class="game-card"
+           data-accent="green"
+           href="../games/scramble/index.html">
+
+            <div class="card-media">
+
+                <video autoplay muted loop playsinline>
+
+                    <source
+                        src="images/scramblevideo.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="card-tag">
+                    Vocabulary
+                </span>
+
+
+                <h3>
+                    Word Scramble
+                </h3>
+
+
+                <p>
+                    Unscramble words across six topics,
+                    from wildlife to economy.
+                </p>
+
+
+                <span class="card-cta">
+
+                    Play now
+
+                    <span aria-hidden="true">
+                        &rarr;
+                    </span>
+
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- Personality -->
+
+        <a class="game-card"
+           data-accent="ink"
+           href="../games/hangman/index.html">
+
+            <div class="card-media">
+
+                <video autoplay muted loop playsinline>
+
+                    <source
+                        src="images/hangmanvideo.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="card-tag">
+                    History
+                </span>
+
+
+                <h3>
+                    Personality Guess
+                </h3>
+
+
+                <p>
+                    Guess the freedom fighter, one revealed
+                    letter at a time.
+                </p>
+
+
+                <span class="card-cta">
+
+                    Play now
+
+                    <span aria-hidden="true">
+                        &rarr;
+                    </span>
+
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- Flip Card -->
+
+        <a class="game-card"
+           data-accent="navy-deep"
+           href="../games/monuments/index.html">
+
+            <div class="card-media">
+
+                <video autoplay muted loop playsinline>
+
+                    <source
+                        src="images/monumentsvideo.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="card-tag">
+                    Memory
+                </span>
+
+
+                <h3>
+                    Flip Card Match
+                </h3>
+
+
+                <p>
+                    Match pairs of India's most iconic
+                    monuments.
+                </p>
+
+
+                <span class="card-cta">
+
+                    Play now
+
+                    <span aria-hidden="true">
+                        &rarr;
+                    </span>
+
+                </span>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="footer-logo">
+         EduQuest
+    </div>
+
+
+    <p>
+        Learn. Play. Discover.
+    </p>
+
+
+    <p class="footer-fine">
+        &copy; 2026 EduQuest. All rights reserved.
+    </p>
+
+</footer>
+
+
+
+<script src="js/eduquest-data.js"></script>
+<script src="js/site-auth.js"></script>
+
+</body>
+
+</html>

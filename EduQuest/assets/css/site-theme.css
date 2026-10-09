@@ -1,0 +1,65 @@
+:root {
+  --ink: #1c1b19;
+  --ink-soft: #5b5750;
+  --ink-faint: #948d81;
+  --paper: #faf6ef;
+  --surface: #ffffff;
+  --border: #e8e0d2;
+
+  --saffron: #e07c1c;
+  --saffron-deep: #b8630f;
+  --green: #14693f;
+  --green-deep: #0d4c2d;
+  --navy: #16284d;
+  --navy-deep: #0b1830;
+  --maroon: #7a3030;
+
+  --shadow-sm: 0 1px 2px rgba(28, 22, 12, 0.08);
+  --shadow-md: 0 10px 24px -8px rgba(28, 22, 12, 0.18);
+  --shadow-lg: 0 24px 48px -12px rgba(28, 22, 12, 0.28);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", "Segoe UI", Verdana, Arial, sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wtd-home-link {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  color: var(--navy);
+  padding: 9px 18px 9px 14px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease), color 0.18s var(--ease);
+}
+
+.wtd-home-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: var(--saffron-deep);
+}
+
+.wtd-home-link:active {
+  transform: translateY(0);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 2px;
+}

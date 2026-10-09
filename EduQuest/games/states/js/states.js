@@ -1,0 +1,113 @@
+const STATES = [ {
+    name: "Andhra Pradesh",
+    left: 37.67,
+    top: 72.5
+}, {
+    name: "Arunachal Pradesh",
+    left: 80.5,
+    top: 30.5
+}, {
+    name: "Assam",
+    left: 74.67,
+    top: 37.17
+}, {
+    name: "Bihar",
+    left: 58.83,
+    top: 39.33
+}, {
+    name: "Chhattisgarh",
+    left: 48.83,
+    top: 52.33
+}, {
+    name: "Goa",
+    left: 25.33,
+    top: 71
+}, {
+    name: "Gujarat",
+    left: 19.5,
+    top: 48.67
+}, {
+    name: "Haryana",
+    left: 33.17,
+    top: 30.17
+}, {
+    name: "Himachal Pradesh",
+    left: 36,
+    top: 21.5
+}, {
+    name: "Jharkhand",
+    left: 57.33,
+    top: 46.5
+}, {
+    name: "Karnataka",
+    left: 30.33,
+    top: 74.83
+}, {
+    name: "Kerala",
+    left: 32.5,
+    top: 88.33
+}, {
+    name: "Madhya Pradesh",
+    left: 39.5,
+    top: 47.83
+}, {
+    name: "Maharashtra",
+    left: 30.17,
+    top: 57.33
+}, {
+    name: "Manipur",
+    left: 81.67,
+    top: 41.5
+}, {
+    name: "Meghalaya",
+    left: 71.83,
+    top: 40.17
+}, {
+    name: "Mizoram",
+    left: 79,
+    top: 47.33
+}, {
+    name: "Nagaland",
+    left: 82.83,
+    top: 37.17
+}, {
+    name: "Odisha",
+    left: 57.67,
+    top: 55.67
+}, {
+    name: "Punjab",
+    left: 30.5,
+    top: 24.83
+}, {
+    name: "Rajasthan",
+    left: 25.5,
+    top: 38.83
+}, {
+    name: "Sikkim",
+    left: 66,
+    top: 33.83
+}, {
+    name: "Tamil Nadu",
+    left: 38,
+    top: 84.5
+}, {
+    name: "Telangana",
+    left: 40.17,
+    top: 64
+}, {
+    name: "Tripura",
+    left: 75.17,
+    top: 44.33
+}, {
+    name: "Uttar Pradesh",
+    left: 43.83,
+    top: 36.5
+}, {
+    name: "Uttarakhand",
+    left: 42.17,
+    top: 26.67
+}, {
+    name: "West Bengal",
+    left: 64.33,
+    top: 47.33
+} ];

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Crossword - An India Quiz Crossword</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../../assets/css/site-theme.css">
+</head>
+<body>
+<a class="wtd-home-link" href="../../home/index.html">🏠 Home</a>
+
+<header>
+  <h1>Bharat Crossword</h1>
+  <p class="tagline">A crossword puzzle on the history, culture &amp; geography of India</p>
+</header>
+
+<main>
+
+  <section id="start-screen" aria-labelledby="start-heading">
+    <h2 id="start-heading">Start Game</h2>
+    <form id="name-form" novalidate>
+      <label for="player-name">Your name</label>
+      <input type="text" id="player-name" name="player-name" placeholder="e.g. Aarav" autocomplete="off" required>
+      <span id="name-error" class="error-msg" role="alert"></span>
+      <button type="submit" id="start-btn">Start Game</button>
+    </form>
+  </section>
+
+  <section id="game-screen" class="hidden" aria-labelledby="game-heading">
+    <h2 id="game-heading">Good luck, <span id="player-name-display"></span>!</h2>
+
+    <div class="stats-bar">
+      <table class="stats-table">
+        <tr>
+          <th scope="row">Time</th>
+          <td id="timer">00:00</td>
+          <th scope="row">Words placed</th>
+          <td id="word-count">0 / 0</td>
+          <th scope="row">Score</th>
+          <td id="score">0</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="game-area">
+      <div class="grid-wrapper">
+        <table id="crossword-grid" class="crossword-grid" aria-label="Crossword grid"></table>
+        <div class="controls">
+          <button type="button" id="check-btn">Check Answers</button>
+          <button type="button" id="reveal-btn">Reveal a Letter</button>
+          <button type="button" id="new-puzzle-btn">New Puzzle</button>
+        </div>
+      </div>
+
+      <div class="clues-panel">
+        <div class="clue-block">
+          <h3>Across</h3>
+          <ol id="across-clues" class="clue-list"></ol>
+        </div>
+        <div class="clue-block">
+          <h3>Down</h3>
+          <ol id="down-clues" class="clue-list"></ol>
+        </div>
+      </div>
+    </div>
+
+    <p id="feedback-msg" class="feedback-msg" role="status" aria-live="polite"></p>
+  </section>
+
+</main>
+
+<script src="js/script.js"></script>
+<script src="../../home/js/eduquest-data.js"></script>
+</body>
+</html>

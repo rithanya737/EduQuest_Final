@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduQuest &mdash; Quiz Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../../assets/css/site-theme.css">
+</head>
+
+<body>
+<a class="wtd-home-link" href="../../home/index.html">🏠 Home</a>
+
+    <div class="spinwheel">
+
+        <h2>Spin the Wheel</h2>
+        <p>Spin the wheel to choose your India Quiz topic!</p>
+        <div class="wheel-container">
+            <div class="pointer"></div>
+            <div class="wheel" id="wheel">
+            
+                <div class="section" data-topic="geography">Geography</div>
+                <div class="section" data-topic="history">History</div>
+                <div class="section" data-topic="polity">Polity</div>
+                <div class="section" data-topic="culture">Culture</div>
+                <div class="section" data-topic="sports">sports</div>
+                <div class="section" data-topic="gk">General Knowledge</div>
+            </div>
+        </div>
+        <button id="spinbutton">Spin</button>
+        
+<button id="refreshbutton">Refresh Wheel</button>
+        <h3 id="result"></h3>
+
+    </div>
+    <script src="js/spin.js"></script>
+</body>
+
+</html>

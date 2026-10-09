@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India States Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../../assets/css/site-theme.css">
+</head>
+<body>
+<a class="wtd-home-link" href="../../home/index.html">🏠 Home</a>
+
+  <div class="page">
+
+    <header class="masthead">
+      <p class="kicker">A Geography Drill &middot; No. 03</p>
+      <h1>The India States Game</h1>
+      <p class="subtitle">Name all twenty-eight states from memory. One try at a time.</p>
+    </header>
+
+    <main>
+
+      <section class="control-panel" aria-label="Game controls">
+
+        <form id="guess-form" autocomplete="off">
+          <label for="guess-input">Name a state</label>
+          <div class="input-row">
+            <input type="text" id="guess-input" placeholder="Type here&hellip;" autofocus required>
+            <button type="submit">Guess</button>
+          </div>
+        </form>
+
+        <p id="feedback" class="feedback" role="status"></p>
+
+        <div class="tally">
+          <span class="tally-count" id="score">0 / 28</span>
+          <span class="tally-label">states found</span>
+        </div>
+
+        <div class="control-buttons">
+          <button id="give-up-btn" type="button" class="btn-outline">Give up</button>
+          <button id="restart-btn" type="button" class="btn-outline hidden">Play again</button>
+        </div>
+
+        <details class="hint-box">
+          <summary>Struggling? A few pointers</summary>
+          <ul>
+            <li>Spelling doesn't have to be perfect &mdash; capitalisation is ignored.</li>
+            <li>The seven north-eastern states are the ones most people forget.</li>
+            <li>Give up any time to see the full list of what you missed.</li>
+          </ul>
+        </details>
+
+      </section>
+
+      <section class="map-panel" aria-label="Map of India">
+        <figure id="map-frame">
+          <div id="map-container">
+            <img id="map-img" src="assets/india-map.gif" alt="Blank outline map of India, states unmarked">
+            
+          </div>
+          <figcaption>Fig. 1 &mdash; Political map of India, states omitted</figcaption>
+        </figure>
+      </section>
+
+    </main>
+
+    <section id="end-screen" class="hidden" aria-live="polite">
+      <h2 id="end-title"></h2>
+      <p class="end-note">States still worth learning:</p>
+      <ul id="missed-list"></ul>
+    </section>
+
+    <footer>
+      <!-- <p>Originally written as a Python turtle-graphics exercise; rebuilt here in HTML, CSS &amp; JavaScript.</p> -->
+    </footer>
+
+  </div>
+
+  <script src="js/states.js"></script>
+  <script src="js/script.js"></script>
+<script src="../../home/js/eduquest-data.js"></script>
+</body>
+</html>
