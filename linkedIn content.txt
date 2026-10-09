@@ -1,1 +1,23 @@
-https://drive.google.com/file/d/1yxW0AdYF1f18V0WoEh6MnRlUPWQUeiGg/view?usp=sharing
+🚀 **Excited to share EduQuest – Assignment 3!** 🎮📚
+
+As part of my **Web Technology Design (WTD) coursework at Velammal College of Engineering and Technology**, I upgraded my previous assignment by integrating **PHP and MySQL connectivity**, taking EduQuest beyond a frontend project to a database-connected web application.
+
+EduQuest is a gamified learning platform featuring six interactive challenges based on India's states, history, monuments, and culture. 🇮🇳
+
+💻 **Tech Stack:** HTML5 | CSS3 | JavaScript | PHP | MySQL
+
+✨ This upgrade strengthened my understanding of backend development, database connectivity, and full-stack web development.
+
+🔮 **Future Scope:** EduQuest will be further enhanced into a **TNPSC exam-focused gamified learning platform**, making competitive exam preparation more engaging and interactive through game-based learning.
+
+🙏 Heartfelt thanks to my mentor, [Tag Mam's LinkedIn profile], for her continuous guidance, and to our respected HOD Mam for her encouragement and support.
+
+🔗 **Assignment 2 – Previous Version:** https://lnkd.in/p/gQVvbGQJ
+🎥 **Project Demo:** https://drive.google.com/file/d/1yxW0AdYF1f18V0WoEh6MnRlUPWQUeiGg/view?usp=sharing
+
+💻 **GitHub Repository:**  
+* **Eesha R S:** https://github.com/eesha230207/assignment-3-Eduquest
+* **Keertana Priya A:**  https://github.com/keerty318/EduQuest-Gamified-Learning-Platform
+* **Rithanya R:** https://github.com/rithanya737/EduQuest_Final
+
+#EduQuest #WebDevelopment #PHP #MySQL #FullStackDevelopment #GamifiedLearning #TNPSC #WTD #VCET
